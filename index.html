@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-Imtihon</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+     <header>
+       <div class="container d-flex py-2">
+         <img class="me-4" src="img/logo.svg" alt="logo" width="266" height="44">
+     <form class="form">
+     <input class="input ms-5" type="text" placeholder="Search books"></form>
+         <button class="btn  ms-auto"><img src="img/sun.svg" alt="dark-mod" width="23" height="23"></button>
+       </div>
+     </header>
+     <main>
+       <div class="shoving  row py-2">
+        <div class="container row">
+          <div class="col-3"></div>
+          <div class="col-9 d-flex justify-content-between "><p class="noFound h4 ms-4">Shovving <span class="book__count result m-0"></span> Resalt(s)</p> 
+         <button class="btn order__btn text-white">Order by newest</button>
+         </div>
+        </div>
+       </div>
+     </main>
+  <div class="container row d-flex m-auto">
+ 
+  <div class="col-3 border p-0 pe-4">
+    <h2 class="">Bookmarks</h2>
+    <p class="">If you don’t like to read, you haven’t found the right book</p>
+    <ul class="bookmark__list list-group list">
+     
+      
+    </ul>
+  </div>
+    <div class="col-9 border p-0 book ">
+      <ul class="book__list  d-flex flex-wrap">
+ 
+  
+   
+
+ 
+      </ul>
+      <ul class="pagination pagination-lg justify-content-center mt-4">
+        <li class="page-item"><a class="page-link" href="#"><</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">></a></li>
+      </ul>
+    </div> 
+  </div>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p class="modal__text"></p>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+ <template id="book__template">
+  <li class="book__item  bg-white p-3 mt-4 ms-4">
+    <img  class="book__img p-3 m-auto" src="img/python.png" alt="python" width="249" height="249">
+    <h3 class="book__name ms-0">Python</h3>
+    <p class="book__after m-0 text-muted ">David M. Beazley</p>
+    <p class="book__year m-0 text-muted">2009</p>
+
+  <div class="d-flex justify-content-between">
+   <button type="button" class="btn__bookmark btn btn-warning px-4">Bookmark</button>
+   <button type="button" class="more__info btn__info btn btn-outline-primary px-4" data-bs-toggle="modal" data-bs-target="#myModal" >More Info</button>
+  </div>
+     <div class="d-grid">
+       <a href="" target="blank" class=" book__read btn btn-secondary btn-block mt-2">Read</a>
+     </div>
+  </li>
+ </template>
+
+
+ <template id="bookmark">
+  <li class="bookmark__item d-flex justify-content-between mb-3">
+    <div class="bookmark__content">
+     <h4 class="bookmark__name">Python</h4>
+     <p class="bookmark__after text-muted">David M. Beazley</p>
+    </div>
+
+    <div class="d-flex align-items-lg-center" >
+      <a class=" bookmark__read btn"><img src="img/book.svg" alt="bookimg" width="24" height="24"></a>
+      <button class="bookmark__del btn"><img src="img/delete.svg" alt="delete" width="24" height="20"> </button>
+    </div>
+   </li>
+ </template>
+    <script src="js/botstrap/bootstrap.js"></script>
+    <script src="js/book.js"></script>
+</body>
+</html>
